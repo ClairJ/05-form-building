@@ -74,7 +74,7 @@ articleView.setTeasers = () => {
 };
 
 // COMMENT: Where is this function called? Why?
-// PUT YOUR RESPONSE HERE
+// It is called in the new.html to render the following JS to that html and not index html.
 articleView.initNewArticlePage = () => {
   // DONE: Ensure the main .tab-content area is revealed. We might add more tabs later or otherwise edit the tab navigation.
   $('.tab-content').show();
@@ -87,7 +87,7 @@ articleView.initNewArticlePage = () => {
     this.select();
   });
 
-  // TODO: Add an event handler to update the preview and the export field if any inputs change.
+  // DONE: Add an event handler to update the preview and the export field if any inputs change.
   //delegate the listener to the children
   //don't invoke the callback so that it will be called on 'change'
   $('#new-form').on('change', 'input, textarea', articleView.create)
@@ -128,7 +128,7 @@ articleView.create = () => {
 };
 
 // COMMENT: Where is this function called? Why?
-// PUT YOUR RESPONSE HERE
+// This is called on index.html to render the following functions on the page with one line so that it doesnt interfere with new.html.
 articleView.initIndexPage = () => {
   articles.forEach(article => $('#articles').append(article.toHtml()));
   articleView.populateFilters();
